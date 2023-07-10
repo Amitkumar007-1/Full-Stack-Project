@@ -18,7 +18,7 @@ export default function Registration() {
   const postDataOnServer = (data) => {
     setLoading(true);
     setTimeout(async () => {
-      await axios.post("https://creepy-cemetery-production.up.railway.app/Employee", data).then((response) => {
+      await axios.post("http://myspringapp-env.eba-3eqktcg6.ap-south-1.elasticbeanstalk.com/Employee", data).then((response) => {
 
         console.log(response.data);
         setEmployee({ name: '', email: '', address: '' });

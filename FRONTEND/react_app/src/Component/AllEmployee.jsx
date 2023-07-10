@@ -15,7 +15,7 @@ export default function AllEmployee() {
     const employees_from_server = () => {
         setLoading(true);
         setTimeout(async () => {
-            await axios.get("https://creepy-cemetery-production.up.railway.app/Employee").then((response) => {
+            await axios.get("http://myspringapp-env.eba-3eqktcg6.ap-south-1.elasticbeanstalk.com/Employee").then((response) => {
                 if (response.status == 200) {
                     toast.success("Employees's Loaded Succesfully!!");
                     setEmployee(response.data);

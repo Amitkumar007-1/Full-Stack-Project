@@ -15,7 +15,7 @@ export default function Update_Employee() {
     const { id } = useParams();
     let navigateToAllEmp = useNavigate();
     const getDataFromServer = async () => {
-        await axios.get(`https://creepy-cemetery-production.up.railway.app/Employee/${id}`).then((response) => {
+        await axios.get(`http://myspringapp-env.eba-3eqktcg6.ap-south-1.elasticbeanstalk.com/Employee/${id}`).then((response) => {
             setEmployee(response.data);
         }, (error) => {
             console.log(error);
@@ -27,7 +27,7 @@ export default function Update_Employee() {
         e.preventDefault();
         setLoading(true);
         setTimeout(async () => {
-            await axios.put(`https://creepy-cemetery-production.up.railway.app/Employee/${id}`, employee).then((response) => {
+            await axios.put(`http://myspringapp-env.eba-3eqktcg6.ap-south-1.elasticbeanstalk.com/Employee/${id}`, employee).then((response) => {
                 if(response.status==200){
                     setLoading(false);
                     toast.success("Updated Successfully!!");

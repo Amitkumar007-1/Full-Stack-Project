@@ -6,7 +6,7 @@ export default function Employee(props) {
 
     const deleteEmployee = async (id) => {
         console.log(id)
-       await axios.delete(`https://creepy-cemetery-production.up.railway.app/Employee/${id}`).then((response) => {
+       await axios.delete(`http://myspringapp-env.eba-3eqktcg6.ap-south-1.elasticbeanstalk.com/Employee/${id}`).then((response) => {
             console.log("Data Deleted");
             props.removeEmp(id);
 
