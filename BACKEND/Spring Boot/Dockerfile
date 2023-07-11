@@ -1,4 +1,4 @@
-FROM openjdk:19
+FROM openjdk:17
 WORKDIR /target
 
 COPY /target/SpringBootApp-0.0.1-SNAPSHOT.jar /target/
